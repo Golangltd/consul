@@ -2,6 +2,7 @@
 @import './tag';
 td strong {
   @extend %tag;
+  background-color: $ui-gray-100;
 }
 td.folder {
   @extend %with-folder;
@@ -18,8 +19,8 @@ td dt.critical {
 table:not(.sessions) tr {
   cursor: pointer;
 }
-th,
-td {
+thead tr,
+tbody tr {
   border-bottom: $decor-border-100;
 }
 td dt.passing,
@@ -37,14 +38,11 @@ td dt.critical + dd {
 th {
   color: $ui-gray-400 !important;
 }
-th {
+thead tr {
   border-color: $keyline-dark;
 }
-td {
+tbody tr {
   border-color: $keyline-mid;
-}
-td strong {
-  background-color: $gray;
 }
 table {
   width: 100%;
